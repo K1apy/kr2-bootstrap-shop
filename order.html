@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Учебная форма: выбранный товар, количество, контакты и способ получения. Проверка полей и подтверждение без отправки на сервер.">
+  <meta name="theme-color" content="#244c35">
+  <title>Заявка — Зелёный магазин</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body class="d-flex flex-column min-vh-100" id="top">
+
+  <a class="visually-hidden-focusable skip-link" href="#main">Перейти к содержимому</a>
+  <div class="announcement text-center py-2">Меньше одноразового. Больше любимых вещей.</div>
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg py-3" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand brand d-flex align-items-center gap-2" href="index.html" aria-label="Зелёный магазин — главная">
+          <img src="images/favicon.svg" alt="" width="44" height="44">
+          <span>зелёный<small class="brand__caption d-block">магазин повседневных вещей</small></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-3 py-3 py-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">О товарах</a></li>
+          <li class="nav-item"><a class="nav-link active" href="order.html" aria-current="page">Заявка</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+          </ul>
+          <a class="btn btn-outline-primary btn-sm ms-xl-4 d-none d-xl-inline-flex" href="order.html">Оставить заявку <span class="ms-2" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="flex-grow-1" id="main">
+
+    <div class="container pt-4">
+      <nav aria-label="Хлебные крошки"><ol class="breadcrumb small mb-4"><li class="breadcrumb-item"><a href="index.html">Главная</a></li><li class="breadcrumb-item active" aria-current="page">Заявка</li></ol></nav>
+      <section class="pb-4 pb-lg-5">
+        <p class="eyebrow mb-2">Следующий шаг</p>
+        <h1 class="display-5 mb-3">Оставить заявку</h1>
+        <p class="text-body-secondary mb-0">Выберите вещь и заполните контакты. Поля со звёздочкой обязательны.</p>
+      </section>
+    </div>
+    <div class="container pb-4"><div class="row g-4 g-lg-5 align-items-start">
+      <div class="col-12 col-lg-8">
+        <div class="alert alert-info small" id="demo-note" role="alert">Учебная форма: данные не сохраняются и не отправляются на сервер. Для проверки можно использовать вымышленные контакты.</div>
+        <form id="order-form" class="order-form" action="#order-form" method="post">
+          <fieldset class="mb-4"><legend class="h5 mb-3"><span class="form-step me-2">01</span> Ваши контакты</legend>
+            <div class="row g-3">
+              <div class="col-12"><label class="form-label" for="order-name">Имя *</label><input class="form-control" id="order-name" name="name" type="text" minlength="2" maxlength="80" autocomplete="given-name" placeholder="Как к вам обращаться" required></div>
+              <div class="col-12 col-md-6"><label class="form-label" for="order-email">Электронная почта *</label><input class="form-control" id="order-email" name="email" type="email" maxlength="120" autocomplete="email" placeholder="name@example.com" required></div>
+              <div class="col-12 col-md-6"><label class="form-label" for="order-phone">Телефон *</label><div class="input-group"><span class="input-group-text" id="phone-prefix">+7</span><input class="form-control" id="order-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" pattern="[0-9]{10}" minlength="10" maxlength="10" placeholder="9001234567" aria-describedby="phone-prefix phone-hint" required></div><div class="form-text" id="phone-hint">Десять цифр после +7, без пробелов и скобок.</div></div>
+            </div>
+          </fieldset>
+          <fieldset class="mb-4"><legend class="h5 mb-3"><span class="form-step me-2">02</span> Ваша вещь</legend><div class="row g-3">
+            <div class="col-12 col-md-8"><label class="form-label" for="order-product">Товар или тема заявки *</label><select class="form-select" id="order-product" name="product" required><option value="">Выберите из каталога</option><option value="bottle">Бутылка «Лес» — 1 200 ₽</option><option value="kit">Зелень на подоконнике — 2 500 ₽</option><option value="bag">Шоппер «Каждый день» — 800 ₽</option><option value="brush">Бамбуковая щётка — 300 ₽</option><option value="covers">Многоразовые бахилы — 500 ₽</option><option value="picnic">Набор для пикника — 3 200 ₽</option><option value="question">Нужна консультация</option></select></div>
+            <div class="col-12 col-md-4"><label class="form-label" for="order-quantity">Количество *</label><input class="form-control" id="order-quantity" name="quantity" type="number" min="1" max="10" step="1" value="1" required></div>
+          </div></fieldset>
+          <fieldset class="mb-4"><legend class="h5 mb-3"><span class="form-step me-2">03</span> Получение и пожелания</legend>
+            <div class="d-flex flex-wrap gap-3 mb-3"><div class="form-check"><input class="form-check-input" id="delivery-pickup" name="delivery" value="pickup" type="radio" checked><label class="form-check-label" for="delivery-pickup">Самовывоз · бесплатно</label></div><div class="form-check"><input class="form-check-input" id="delivery-courier" name="delivery" value="courier" type="radio"><label class="form-check-label" for="delivery-courier">Доставка · 300 ₽</label></div></div>
+            <label class="form-label" for="order-comment">Комментарий</label><textarea class="form-control" id="order-comment" name="comment" rows="4" maxlength="1000" placeholder="Например, вопрос о товаре или удобное время для связи"></textarea>
+          </fieldset>
+          <div class="form-check mb-4"><input class="form-check-input" id="order-agreement" name="agreement" type="checkbox" required><label class="form-check-label small" for="order-agreement">Я согласен на обработку указанных данных в рамках учебной демонстрации. *</label></div>
+          <div class="d-flex flex-wrap gap-3"><button class="btn btn-primary px-4" type="submit" aria-describedby="demo-note">Проверить заявку <span class="ms-2" aria-hidden="true">↗</span></button><button class="btn btn-outline-secondary" type="reset">Очистить форму</button></div>
+          <noscript><p class="alert alert-warning mt-3">Для учебного подтверждения нужен JavaScript. Без него поля можно заполнить, но отправлять форму не следует: обработчик сервера не подключён.</p></noscript>
+        </form>
+      </div>
+      <aside class="col-12 col-lg-4" aria-labelledby="steps-title"><div class="order-guide rounded-4 p-4"><p class="eyebrow">Всё просто</p><h2 class="h3" id="steps-title">Как это устроено</h2><ol class="ps-3 mt-4"><li class="mb-3"><strong>Выберите товар</strong><p class="small text-body-secondary mb-0">Ссылка «Выбрать» переносит ваш выбор в форму.</p></li><li class="mb-3"><strong>Заполните поля</strong><p class="small text-body-secondary mb-0">Браузер проверит обязательные данные.</p></li><li><strong>Посмотрите подтверждение</strong><p class="small text-body-secondary mb-0">Это демонстрация. Заявка не отправляется.</p></li></ol><img class="order-guide__image" src="images/bottle.svg" alt="Зелёная бутылка «Лес»" width="600" height="500"><a class="text-link small" href="catalog.html">Вернуться в каталог ↗</a></div></aside>
+    </div></div>
+  </main>
+
+  <footer class="site-footer mt-5 py-4" id="contacts">
+    <div class="container">
+      <div class="row g-4 py-3">
+        <div class="col-12 col-md-6">
+          <a class="brand text-decoration-none" href="index.html">зелёный</a>
+          <p class="small text-body-secondary mt-3 mb-0">Вещи, к которым привыкаешь.<br>Учебный магазин: цены и условия демонстрационные.</p>
+        </div>
+        <nav class="col-6 col-md-3 d-flex flex-column gap-2 small" aria-label="Разделы главной">
+          <a href="index.html#advantages">Почему мы</a>
+          <a href="index.html#popular">Популярные товары</a>
+          <a href="index.html#faq">Вопросы и ответы</a>
+        </nav>
+        <nav class="col-6 col-md-3 d-flex flex-column gap-2 small" aria-label="Полезные ссылки">
+          <a href="catalog.html#comparison">Сравнение товаров</a>
+          <a href="contacts.html">Контакты и получение</a>
+          <a href="order.html">Оставить заявку</a>
+        </nav>
+      </div>
+      <div class="border-top pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small text-body-secondary">
+        <span>Киселев Максим Андреевич · ЭФБО-01-25</span>
+        <span>КР №2 · Bootstrap · 2026</span>
+      </div>
+    </div>
+  </footer>
+  <a class="back-to-top btn btn-light rounded-circle shadow-sm" href="#top" aria-label="Вернуться наверх">↑</a>
+
+  <div class="modal fade" id="delivery-modal" tabindex="-1" aria-labelledby="delivery-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h4" id="delivery-modal-title">Как получить выбранную вещь</h2>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть условия получения"></button>
+        </div>
+        <div class="modal-body">
+          <p>В учебном макете предусмотрены самовывоз без доплаты и доставка за 300 ₽.</p>
+          <p class="text-body-secondary mb-0">Способ получения выбирается в заявке. Реальная доставка и оплата не выполняются.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="modal">Закрыть</button>
+          <a class="btn btn-primary" href="order.html">К заявке</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="success-modal" tabindex="-1" aria-labelledby="success-title" aria-describedby="success-description" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+      <div class="modal-header"><h2 class="modal-title h4" id="success-title">Проверка пройдена</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть подтверждение"></button></div>
+      <div class="modal-body">
+        <div class="alert alert-success" role="alert">Обязательные поля заполнены корректно.</div>
+        <p class="fw-semibold" id="order-summary-text"></p>
+        <p class="text-body-secondary mb-0" id="success-description">Это учебное подтверждение: данные не отправлены и не сохранены, настоящий заказ не создан. Закройте окно, чтобы изменить заполненные поля.</p>
+      </div>
+      <div class="modal-footer"><button class="btn btn-outline-primary" type="button" data-bs-dismiss="modal">Изменить данные</button><a class="btn btn-primary" href="catalog.html">Вернуться в каталог</a></div>
+    </div></div>
+  </div>
+</body>
+</html>

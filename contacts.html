@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контакты учебного магазина, демонстрационные условия получения и ответы на вопросы о заявке.">
+  <meta name="theme-color" content="#244c35">
+  <title>Контакты и получение — Зелёный магазин</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body class="d-flex flex-column min-vh-100" id="top">
+
+  <a class="visually-hidden-focusable skip-link" href="#main">Перейти к содержимому</a>
+  <div class="announcement text-center py-2">Меньше одноразового. Больше любимых вещей.</div>
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg py-3" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand brand d-flex align-items-center gap-2" href="index.html" aria-label="Зелёный магазин — главная">
+          <img src="images/favicon.svg" alt="" width="44" height="44">
+          <span>зелёный<small class="brand__caption d-block">магазин повседневных вещей</small></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-3 py-3 py-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">О товарах</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contacts.html" aria-current="page">Контакты</a></li>
+          </ul>
+          <a class="btn btn-outline-primary btn-sm ms-xl-4 d-none d-xl-inline-flex" href="order.html">Оставить заявку <span class="ms-2" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="flex-grow-1" id="main">
+
+    <div class="container pt-4">
+      <nav aria-label="Хлебные крошки"><ol class="breadcrumb small mb-4"><li class="breadcrumb-item"><a href="index.html">Главная</a></li><li class="breadcrumb-item active" aria-current="page">Контакты</li></ol></nav>
+      <section class="pb-4 pb-lg-5">
+        <p class="eyebrow mb-2">Остаёмся на связи</p>
+        <h1 class="display-5 mb-3">Поможем разобраться</h1>
+        <p class="text-body-secondary mb-0">Материалы, уход или выбор вещи — начните с заявки.</p>
+      </section>
+    </div>
+    <div class="container"><div class="row g-4">
+      <section class="col-12 col-lg-6" aria-labelledby="contact-title"><div class="contact-panel rounded-4 p-4 p-lg-5 h-100"><p class="eyebrow">Напишите нам</p><h2 class="h3 mb-3" id="contact-title">Есть вопрос о товаре?</h2><p class="text-body-secondary">Выберите «Нужна консультация» в форме и добавьте свой вопрос в комментарий.</p><a class="btn btn-primary" href="order.html?product=question">Открыть форму ↗</a><address class="mt-4 mb-3"><span class="small text-body-secondary d-block">Электронная почта макета</span><a href="mailto:hello@green-shop.example">hello@green-shop.example</a><span class="small text-body-secondary d-block mt-3">Город учебного проекта</span>Москва</address><p class="small text-body-secondary mb-0">Адрес с доменом .example вымышленный. Письма по нему не принимаются; реального магазина и пункта выдачи нет.</p></div></section>
+      <section class="col-12 col-lg-6" aria-labelledby="receiving-title"><div class="card rounded-4 h-100"><div class="card-body p-4 p-lg-5"><p class="eyebrow">Условия в макете</p><h2 class="h3 mb-4" id="receiving-title">Два способа получения</h2><article class="d-flex gap-3 border-bottom pb-3 mb-3"><span class="advantage-number" aria-hidden="true">01</span><div><h3 class="h5">Самовывоз</h3><p class="small text-body-secondary">Пункт и время выдачи в реальном магазине уточнялись бы при подтверждении заказа.</p><span class="badge text-bg-success">Бесплатно</span></div></article><article class="d-flex gap-3"><span class="advantage-number" aria-hidden="true">02</span><div><h3 class="h5">Доставка</h3><p class="small text-body-secondary">Для демонстрации используется фиксированная стоимость.</p><span class="badge text-bg-success">300 ₽</span></div></article><button class="btn btn-outline-primary btn-sm mt-4" type="button" data-bs-toggle="modal" data-bs-target="#delivery-modal">Подробнее об условиях</button></div></div></section>
+    </div><section class="section-space" aria-labelledby="contacts-faq-title"><div class="row g-4 g-lg-5"><div class="col-12 col-lg-4"><p class="eyebrow">Полезно знать</p><h2 id="contacts-faq-title">О заявке и уходе</h2></div><div class="col-12 col-lg-8"><div class="accordion" id="contacts-faq">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contacts-faq-1" aria-expanded="false" aria-controls="contacts-faq-1">Почему нет оплаты и корзины?</button>
+            </h3>
+            <div class="accordion-collapse collapse" id="contacts-faq-1" data-bs-parent="#contacts-faq">
+              <div class="accordion-body text-body-secondary">Это контрольная работа по CSS-фреймворкам. Здесь показан путь от каталога к форме. Оплата, корзина и серверная обработка в этот этап не входят.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contacts-faq-2" aria-expanded="false" aria-controls="contacts-faq-2">Что произойдёт после проверки формы?</button>
+            </h3>
+            <div class="accordion-collapse collapse" id="contacts-faq-2" data-bs-parent="#contacts-faq">
+              <div class="accordion-body text-body-secondary">Откроется окно с выбранным товаром, количеством и способом получения. Данные останутся в полях для изменения, но на сервер не отправятся.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contacts-faq-3" aria-expanded="false" aria-controls="contacts-faq-3">Как выбрать подходящий материал?</button>
+            </h3>
+            <div class="accordion-collapse collapse" id="contacts-faq-3" data-bs-parent="#contacts-faq">
+              <div class="accordion-body text-body-secondary">Начните со <a href="catalog.html#comparison">сравнения популярных товаров</a>, затем откройте подробное описание и вкладку «Уход».</div>
+            </div>
+          </div>
+        </div></div></div></section></div>
+  </main>
+
+  <footer class="site-footer mt-5 py-4" id="contacts">
+    <div class="container">
+      <div class="row g-4 py-3">
+        <div class="col-12 col-md-6">
+          <a class="brand text-decoration-none" href="index.html">зелёный</a>
+          <p class="small text-body-secondary mt-3 mb-0">Вещи, к которым привыкаешь.<br>Учебный магазин: цены и условия демонстрационные.</p>
+        </div>
+        <nav class="col-6 col-md-3 d-flex flex-column gap-2 small" aria-label="Разделы главной">
+          <a href="index.html#advantages">Почему мы</a>
+          <a href="index.html#popular">Популярные товары</a>
+          <a href="index.html#faq">Вопросы и ответы</a>
+        </nav>
+        <nav class="col-6 col-md-3 d-flex flex-column gap-2 small" aria-label="Полезные ссылки">
+          <a href="catalog.html#comparison">Сравнение товаров</a>
+          <a href="contacts.html">Контакты и получение</a>
+          <a href="order.html">Оставить заявку</a>
+        </nav>
+      </div>
+      <div class="border-top pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small text-body-secondary">
+        <span>Киселев Максим Андреевич · ЭФБО-01-25</span>
+        <span>КР №2 · Bootstrap · 2026</span>
+      </div>
+    </div>
+  </footer>
+  <a class="back-to-top btn btn-light rounded-circle shadow-sm" href="#top" aria-label="Вернуться наверх">↑</a>
+
+  <div class="modal fade" id="delivery-modal" tabindex="-1" aria-labelledby="delivery-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h4" id="delivery-modal-title">Как получить выбранную вещь</h2>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть условия получения"></button>
+        </div>
+        <div class="modal-body">
+          <p>В учебном макете предусмотрены самовывоз без доплаты и доставка за 300 ₽.</p>
+          <p class="text-body-secondary mb-0">Способ получения выбирается в заявке. Реальная доставка и оплата не выполняются.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="modal">Закрыть</button>
+          <a class="btn btn-primary" href="order.html">К заявке</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
