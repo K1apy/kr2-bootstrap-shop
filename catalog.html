@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Шесть многоразовых товаров: категории, иллюстрации, цены и сравнение материалов.">
+  <meta name="theme-color" content="#244c35">
+  <title>Каталог — Зелёный магазин</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body class="d-flex flex-column min-vh-100" id="top">
+
+  <a class="visually-hidden-focusable skip-link" href="#main">Перейти к содержимому</a>
+  <div class="announcement text-center py-2">Меньше одноразового. Больше любимых вещей.</div>
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg py-3" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand brand d-flex align-items-center gap-2" href="index.html" aria-label="Зелёный магазин — главная">
+          <img src="images/favicon.svg" alt="" width="44" height="44">
+          <span>зелёный<small class="brand__caption d-block">магазин повседневных вещей</small></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-3 py-3 py-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link active" href="catalog.html" aria-current="page">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">О товарах</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+          </ul>
+          <a class="btn btn-outline-primary btn-sm ms-xl-4 d-none d-xl-inline-flex" href="order.html">Оставить заявку <span class="ms-2" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="flex-grow-1" id="main">
+
+    <div class="container pt-4">
+      <nav aria-label="Хлебные крошки"><ol class="breadcrumb small mb-4"><li class="breadcrumb-item"><a href="index.html">Главная</a></li><li class="breadcrumb-item active" aria-current="page">Каталог</li></ol></nav>
+      <section class="pb-4 pb-lg-5">
+        <p class="eyebrow mb-2">Для небольших перемен</p>
+        <h1 class="display-5 mb-3">Вещи с продолжением</h1>
+        <p class="text-body-secondary mb-0">Выбирайте то, чем будете пользоваться каждый день.</p>
+      </section>
+    </div>
+    <div class="container"><div class="row g-4 g-lg-5">
+      <aside class="col-12 col-lg-3" aria-labelledby="filters-title">
+        <div class="card catalog-filters"><div class="card-body p-4">
+          <p class="eyebrow">Навигация по каталогу</p><h2 class="h3" id="filters-title">Что ищем?</h2>
+          <nav class="d-flex flex-column gap-3 py-3" aria-label="Категории товаров"><a href="#everyday" class="d-flex justify-content-between">В дорогу <span class="small">03</span></a><a href="#home" class="d-flex justify-content-between">Для дома <span class="small">02</span></a><a href="#outdoor" class="d-flex justify-content-between">На природу <span class="small">01</span></a><a href="#comparison">Сравнить товары ↓</a></nav>
+          <form class="border-top pt-3 mt-2">
+            <fieldset><legend class="fs-6 fw-semibold">Стоимость</legend>
+              <div class="form-check mb-2"><input class="form-check-input" type="radio" name="price" value="any" id="price-any" checked><label class="form-check-label small" for="price-any">Любая</label></div>
+              <div class="form-check mb-2"><input class="form-check-input" type="radio" name="price" value="low" id="price-low"><label class="form-check-label small" for="price-low">До 1 000 ₽</label></div>
+              <div class="form-check mb-3"><input class="form-check-input" type="radio" name="price" value="high" id="price-high"><label class="form-check-label small" for="price-high">От 1 000 ₽</label></div>
+            </fieldset>
+            <button class="btn btn-primary btn-sm w-100" type="button" disabled>Применить фильтр</button>
+            <p class="small text-body-secondary mt-3 mb-2">Макет фильтра. Выбор цены не меняет товары; ссылки на категории работают.</p>
+            <button class="btn btn-link btn-sm p-0" type="reset">Сбросить выбор</button>
+          </form>
+        </div></div>
+      </aside>
+      <div class="col-12 col-lg-9">
+        <div class="d-flex flex-wrap justify-content-between gap-2 small text-body-secondary border-bottom pb-3 mb-4"><span>В каталоге 6 товаров</span><a href="#comparison">К таблице сравнения ↓</a></div>
+        <section class="mb-5" id="everyday" aria-labelledby="everyday-title"><h2 class="h3 mb-4" id="everyday-title">В дорогу</h2><div class="row g-4">
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="card product-card h-100">
+            <div class="product-card__picture position-relative">
+              <span class="badge bg-white text-primary product-card__badge">Выбор недели</span>
+              <img src="images/bottle.svg" class="card-img-top product-card__image" alt="Бутылка «Лес»" width="600" height="500" loading="lazy">
+            </div>
+            <div class="card-body d-flex flex-column p-4">
+              <p class="eyebrow mb-2">В дорогу</p>
+              <h3 class="card-title h5"><a class="product-card__title" href="product.html#bottle">Бутылка «Лес»</a></h3>
+              <p class="card-text small text-body-secondary mb-4">Матовая стальная бутылка для воды. Удобно взять на пары, прогулку или тренировку.</p>
+              <p class="fw-semibold fs-5 mt-auto">1 200 ₽</p>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-outline-primary btn-sm" href="product.html#bottle" aria-label="Подробнее: Бутылка «Лес»">Подробнее</a>
+                <a class="btn btn-primary btn-sm" href="order.html?product=bottle" aria-label="Заявка: Бутылка «Лес»">Выбрать <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="card product-card h-100 product-card--discount">
+            <div class="product-card__picture position-relative">
+              <span class="badge text-bg-success product-card__badge">−20%</span>
+              <img src="images/bag.svg" class="card-img-top product-card__image" alt="Шоппер «Каждый день»" width="600" height="500" loading="lazy">
+            </div>
+            <div class="card-body d-flex flex-column p-4">
+              <p class="eyebrow mb-2">В дорогу</p>
+              <h3 class="card-title h5"><a class="product-card__title" href="product.html#bag">Шоппер «Каждый день»</a></h3>
+              <p class="card-text small text-body-secondary mb-4">Плотный хлопок, длинные ручки и место для всего, что не поместилось в рюкзак.</p>
+              <p class="fw-semibold fs-5 mt-auto">800 ₽ <del class="small text-body-secondary ms-1">1 000 ₽</del></p>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-outline-primary btn-sm" href="product.html#bag" aria-label="Подробнее: Шоппер «Каждый день»">Подробнее</a>
+                <a class="btn btn-primary btn-sm" href="order.html?product=bag" aria-label="Заявка: Шоппер «Каждый день»">Выбрать <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="card product-card h-100">
+            <div class="product-card__picture position-relative">
+
+              <img src="images/covers.svg" class="card-img-top product-card__image" alt="Многоразовые бахилы" width="600" height="500" loading="lazy">
+            </div>
+            <div class="card-body d-flex flex-column p-4">
+              <p class="eyebrow mb-2">В дорогу</p>
+              <h3 class="card-title h5"><a class="product-card__title" href="product.html#covers">Многоразовые бахилы</a></h3>
+              <p class="card-text small text-body-secondary mb-4">Тканевые бахилы на резинке. После использования их можно постирать.</p>
+              <p class="fw-semibold fs-5 mt-auto">500 ₽</p>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-outline-primary btn-sm" href="product.html#covers" aria-label="Подробнее: Многоразовые бахилы">Подробнее</a>
+                <a class="btn btn-primary btn-sm" href="order.html?product=covers" aria-label="Заявка: Многоразовые бахилы">Выбрать <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div></div></section><section class="mb-5" id="home" aria-labelledby="home-title"><h2 class="h3 mb-4" id="home-title">Для дома</h2><div class="row g-4">
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="card product-card h-100">
+            <div class="product-card__picture position-relative">
+              <span class="badge bg-white text-primary product-card__badge">Новинка</span>
+              <img src="images/kit.svg" class="card-img-top product-card__image" alt="Зелень на подоконнике" width="600" height="500" loading="lazy">
+            </div>
+            <div class="card-body d-flex flex-column p-4">
+              <p class="eyebrow mb-2">Для дома</p>
+              <h3 class="card-title h5"><a class="product-card__title" href="product.html#kit">Зелень на подоконнике</a></h3>
+              <p class="card-text small text-body-secondary mb-4">Базилик, мята и немного терпения. Набор для первого домашнего огорода.</p>
+              <p class="fw-semibold fs-5 mt-auto">2 500 ₽</p>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-outline-primary btn-sm" href="product.html#kit" aria-label="Подробнее: Зелень на подоконнике">Подробнее</a>
+                <a class="btn btn-primary btn-sm" href="order.html?product=kit" aria-label="Заявка: Зелень на подоконнике">Выбрать <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="card product-card h-100">
+            <div class="product-card__picture position-relative">
+
+              <img src="images/brush.svg" class="card-img-top product-card__image" alt="Бамбуковая щётка" width="600" height="500" loading="lazy">
+            </div>
+            <div class="card-body d-flex flex-column p-4">
+              <p class="eyebrow mb-2">Для дома</p>
+              <h3 class="card-title h5"><a class="product-card__title" href="product.html#brush">Бамбуковая щётка</a></h3>
+              <p class="card-text small text-body-secondary mb-4">Простая щётка с бамбуковой ручкой и мягкой щетиной для ежедневного ухода.</p>
+              <p class="fw-semibold fs-5 mt-auto">300 ₽</p>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-outline-primary btn-sm" href="product.html#brush" aria-label="Подробнее: Бамбуковая щётка">Подробнее</a>
+                <a class="btn btn-primary btn-sm" href="order.html?product=brush" aria-label="Заявка: Бамбуковая щётка">Выбрать <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div></div></section><section class="mb-5" id="outdoor" aria-labelledby="outdoor-title"><h2 class="h3 mb-4" id="outdoor-title">На природу</h2><div class="row g-4">
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="card product-card h-100">
+            <div class="product-card__picture position-relative">
+              <span class="badge bg-white text-primary product-card__badge">Набор на двоих</span>
+              <img src="images/picnic.svg" class="card-img-top product-card__image" alt="Набор для пикника" width="600" height="500" loading="lazy">
+            </div>
+            <div class="card-body d-flex flex-column p-4">
+              <p class="eyebrow mb-2">На природу</p>
+              <h3 class="card-title h5"><a class="product-card__title" href="product.html#picnic">Набор для пикника</a></h3>
+              <p class="card-text small text-body-secondary mb-4">Две тарелки, приборы и льняной чехол для небольшого обеда на свежем воздухе.</p>
+              <p class="fw-semibold fs-5 mt-auto">3 200 ₽</p>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-outline-primary btn-sm" href="product.html#picnic" aria-label="Подробнее: Набор для пикника">Подробнее</a>
+                <a class="btn btn-primary btn-sm" href="order.html?product=picnic" aria-label="Заявка: Набор для пикника">Выбрать <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div></div></section>
+      </div>
+    </div></div>
+    <section class="container mb-5" id="comparison" aria-labelledby="comparison-title"><p class="eyebrow">Выбрать проще</p><h2 class="mb-4" id="comparison-title">Три вещи — три привычки</h2>
+      <div class="table-responsive rounded border" tabindex="0" role="region" aria-label="Сравнение товаров; таблицу можно прокручивать по горизонтали">
+        <table class="table table-striped align-middle comparison-table mb-0"><caption class="caption-top px-3">Сравнение популярных товаров</caption>
+          <thead><tr><th scope="col">Что сравниваем</th><th scope="col">Бутылка «Лес»</th><th scope="col">Шоппер</th><th scope="col">Набор зелени</th></tr></thead>
+          <tbody><tr><th scope="row">Для чего</th><td>Вода с собой</td><td>Покупки и учёба</td><td>Домашний огород</td></tr><tr><th scope="row">Материал</th><td>Сталь</td><td>Хлопок</td><td>Терракота</td></tr><tr><th scope="row">Уход</th><td>Мыть вручную</td><td>Стирка при 30 °C</td><td>Свет и полив</td></tr><tr><th scope="row">Цена</th><td>1 200 ₽</td><td>800 ₽</td><td>2 500 ₽</td></tr><tr><th scope="row">Подробности</th><td><a href="product.html#bottle">О бутылке ↗</a></td><td><a href="product.html#bag">О шоппере ↗</a></td><td><a href="product.html#kit">О наборе ↗</a></td></tr></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer mt-5 py-4" id="contacts">
+    <div class="container">
+      <div class="row g-4 py-3">
+        <div class="col-12 col-md-6">
+          <a class="brand text-decoration-none" href="index.html">зелёный</a>
+          <p class="small text-body-secondary mt-3 mb-0">Вещи, к которым привыкаешь.<br>Учебный магазин: цены и условия демонстрационные.</p>
+        </div>
+        <nav class="col-6 col-md-3 d-flex flex-column gap-2 small" aria-label="Разделы главной">
+          <a href="index.html#advantages">Почему мы</a>
+          <a href="index.html#popular">Популярные товары</a>
+          <a href="index.html#faq">Вопросы и ответы</a>
+        </nav>
+        <nav class="col-6 col-md-3 d-flex flex-column gap-2 small" aria-label="Полезные ссылки">
+          <a href="catalog.html#comparison">Сравнение товаров</a>
+          <a href="contacts.html">Контакты и получение</a>
+          <a href="order.html">Оставить заявку</a>
+        </nav>
+      </div>
+      <div class="border-top pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small text-body-secondary">
+        <span>Киселев Максим Андреевич · ЭФБО-01-25</span>
+        <span>КР №2 · Bootstrap · 2026</span>
+      </div>
+    </div>
+  </footer>
+  <a class="back-to-top btn btn-light rounded-circle shadow-sm" href="#top" aria-label="Вернуться наверх">↑</a>
+
+  <div class="modal fade" id="delivery-modal" tabindex="-1" aria-labelledby="delivery-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h4" id="delivery-modal-title">Как получить выбранную вещь</h2>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть условия получения"></button>
+        </div>
+        <div class="modal-body">
+          <p>В учебном макете предусмотрены самовывоз без доплаты и доставка за 300 ₽.</p>
+          <p class="text-body-secondary mb-0">Способ получения выбирается в заявке. Реальная доставка и оплата не выполняются.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="modal">Закрыть</button>
+          <a class="btn btn-primary" href="order.html">К заявке</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
