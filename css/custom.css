@@ -74,6 +74,11 @@ a { text-underline-offset: 4px; }
 .hero__product small { margin-top: 3px; font-size: 11px; }
 .advantage-number, .form-step { font-family: Georgia, serif; font-size: 25px; color: #708158; line-height: 1.2; }
 .section-space { margin-block: 64px; }
+.ideas-carousel__slide { min-height: 375px; background: #edf0e3; }
+.ideas-carousel__copy { min-height: 235px; }
+.ideas-carousel__image { display: block; width: 100%; height: 270px; object-fit: contain; }
+.ideas-carousel__indicators [data-bs-target] { box-sizing: border-box; width: 44px; height: 44px; margin: 0; padding: 20px 8px; border: 0; background-color: var(--shop-primary); background-clip: content-box; opacity: .4; }
+.ideas-carousel__indicators .active { opacity: 1; }
 .product-card { border-radius: 12px; overflow: hidden; transition: border-color .2s; }
 .product-card:hover { border-color: #87967c; }
 .product-card__picture, .product-detail__visual { background: var(--shop-surface); }
@@ -128,6 +133,14 @@ address { font-style: normal; }
   .hero__product { right: 14px; left: 14px; font-size: 11px; }
   .nav-tabs .nav-link { padding: 9px 10px; font-size: 12px; }
   .tab-content { min-height: 260px; }
+}
+@media (max-width: 767.98px) {
+  .ideas-carousel__slide { min-height: 640px; }
+  .ideas-carousel__copy { min-height: 245px; }
+  .ideas-carousel__image { height: 210px; }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .ideas-carousel__slide { min-height: 420px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
