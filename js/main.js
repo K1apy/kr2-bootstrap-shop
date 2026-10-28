@@ -1,3 +1,9 @@
+const ideasCarousel = document.getElementById('ideas-carousel');
+
+if (ideasCarousel) {
+  bootstrap.Carousel.getOrCreateInstance(ideasCarousel, { ride: false });
+}
+
 const productSelect = document.getElementById('order-product');
 const selectedProduct = new URLSearchParams(window.location.search).get('product');
 
